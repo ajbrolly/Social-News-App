@@ -1,0 +1,70 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Social News Scraper App - Comment on the Latest News!
+        script(src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower")
+    body
+        .navbar-fixed
+            nav(role="navigation")
+                div(class="nav-wrapper container")
+                    a(id="logo-container" href="/" class="brand-logo center")
+                    a(href="#" data-activates="mobile-demo" class="button-collapse")
+                        i(class="material-icons")| menu
+                    ul(class="right hide-on-med-and-down")
+                        li
+                            a(href="/" class="userLink") Home
+                        li
+                            a(href="/scrape" class="btn btn-large scraper amber") Scrape New Articles
+
+        ul(id="mobile-demo" class="side-nav")
+            li
+                a(class="subheader") Mongo News Scraper
+            li
+                .divider
+            li(class="active")
+                a(href="/") Home
+            li
+                a(href="/scrape" class="btn btn-large") Scrape New Articles
+
+
+        .row.center
+            h1(class="header") Mongo News Scraper
+            h3|Reddit World News Edition
+
+        .row.center.container#main-content
+            block content
+        .page-footer
+            .container
+                .row
+                    div(class="col l6 s12")
+                        h5(class="white-text") Get Ripped
+                        p(class="grey-text text-lighten-4")
+                    div(class="col l3 s12")
+                        h5(class="white-text") Get Social
+                        ul
+                            li
+                                a(href="/social") Social Feed
+                            li
+                                a(href="/profile/:id") User Profile
+                    div(class="col l3 s12")
+                        h5(class="white-text") Work It Out
+                        ul
+                            li
+                                a(href="/exercise") Sample Workouts
+            .footer-copyright
+                .container
+                    p Follow us at 
+                        a(class="black-text text-lighten-3" href="www.faceook.com/GetRippedCWRU") GetRippedCWRU
+        //- jQuery
+        script(src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous")
+        //- Materialize
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")
+        //- Custom Scripts
+        script(src="/app.js")
